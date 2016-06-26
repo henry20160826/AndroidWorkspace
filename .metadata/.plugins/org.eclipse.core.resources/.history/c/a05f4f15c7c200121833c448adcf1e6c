@@ -1,0 +1,195 @@
+package com.hu.activity;
+
+import static com.hu.DataClass.Content.*;
+
+import java.util.DuplicateFormatFlagsException;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.hu.DataClass.NetInfo;
+import com.hu.DataClass.SmsInfo;
+import com.hu.NetHelper.UDPHelper;
+import com.hu.NetHelper.WifiHelper;
+import com.hu.toupiao.R;
+
+public class NewElectionActivity extends Activity {
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	private TextView textView, ipTextView;
+	private Button button, refreshButton;
+	private UDPHelper udpHelper;
+	private Handler textviewHandler;
+	private WifiHelper wifiHelper;
+	private Handler netHandler;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO 创建Activity
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_newelection);
+
+		getWidget();
+		// SMSReceiver receiver = new SMSReceiver();
+		// getSmsInfo();
+		udpHelper = new UDPHelper(SERVEICE_PORT, netHandler);
+		textView.setText("没有数据");
+		udpHelper.receiveRun();
+	}
+
+	public void getSmsInfo() {
+		// TODO 获得未读的Sms
+		String[] projection = new String[] { "_id", "address", "person",
+
+		"body", "date", "type" };
+		Uri uri = Uri.parse(SMS_URI_ALL);
+		String selection = "type = 1 and read = 0";// 短信而且未读
+		Cursor cursor = managedQuery(uri, projection, selection, null,
+				"date desc");
+		int nameColumn = cursor.getColumnIndex("person");
+		int phoneNumberColumn = cursor.getColumnIndex("address");
+		int smsbodyColumn = cursor.getColumnIndex("body");
+		int dateColumn = cursor.getColumnIndex("date");
+		int typeColumn = cursor.getColumnIndex("type");
+		if (0 != cursor.getCount()) {
+			SmsInfo smsinfo = new SmsInfo();
+			while (cursor.moveToNext()) {
+				smsinfo.setName(cursor.getString(nameColumn));
+				smsinfo.setDate(cursor.getString(dateColumn));
+				smsinfo.setPhoneNumber(cursor.getString(phoneNumberColumn));
+				smsinfo.setSmsbody(cursor.getString(smsbodyColumn));
+				smsinfo.setType(cursor.getString(typeColumn));
+				break;
+			}
+			textView.setText(smsinfo.getPhoneNumber());
+			cursor.close();
+		} else {
+			textView.setText("没有未读信息");
+		}
+
+	}
+
+	public void refreshIPInfo() {
+		ipTextView.setText(wifiHelper.getIp(NewElectionActivity.this));
+	}
+
+	public boolean checkSms(Cursor cursor) {
+		// TODO 鉴权，判断是否有投票权限
+		// 不能在Cursor中删除对象，所以一条一条处理短信
+		return false;
+	}
+
+	public void analysisSms(Cursor cursor) {
+		// TODO 解析短信
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onDestroy()
+	 */
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		udpHelper.close();
+	}
+
+	public void addVote() {
+		// TODO 将新的票添加到显示
+	}
+
+	private void getWidget() {
+
+		wifiHelper = new WifiHelper();
+		textView = (TextView) findViewById(R.id.textView1);
+		ipTextView = (TextView) findViewById(R.id.tv_ip);
+		button = (Button) findViewById(R.id.button1);
+		button.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				System.out.println("button down");
+				Intent intent = new Intent();
+				intent.setAction(Intent.ACTION_EDIT);
+				NewElectionActivity.this.sendBroadcast(intent);
+			}
+		});
+		refreshButton = (Button) findViewById(R.id.bt_refresh);
+		refreshButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				refreshIPInfo();
+			}
+		});
+		// TODO 得到Activity所需的控件
+		textviewHandler = new Handler() {
+			// TODO textviewHandler
+			@Override
+			public void handleMessage(Message msg) {
+				// TODO Auto-generated method stub
+				super.handleMessage(msg);
+//				textView.setText((String) msg.obj);
+				textView.append((String) msg.obj, 0, 1);
+			}
+
+		};
+		netHandler = new Handler() {
+			// TODO netHandler
+			@Override
+			public void handleMessage(Message msg) {
+				// TODO Auto-generated method stub
+				super.handleMessage(msg);
+				udpHelper.receiveRun();
+				textviewHandler.sendMessage(msg);
+				String all = (String) msg.obj;
+				NetInfo netInfo = new NetInfo(all);
+				Message message = new Message();
+				message.what = Integer.parseInt(netInfo.getType());
+				switch (message.what) {
+				case NET_CONNECT_HOPE:
+					new Thread() {
+						@Override
+						public void run() {
+							// TODO Auto-generated method stub
+							super.run();
+							udpHelper.sendData(udpHelper.getIP(), CLIENT_PORT,
+									NET_CONNECT_OK + SPLIT_TYPE_INFO);
+						}
+					}.start();
+					// NET_CONNECT_OK;
+					break;
+				case NET_WANT_DATA:
+					// NET_SEND_VOTE;
+					break;
+				case NET_SEND_VOTE:
+					// TODO 需要处理收到的投票
+					// NET_RECEIVED_OK
+					break;
+				}
+				new Thread() {
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						super.run();
+					}
+				}.start();
+			};
+		};
+	}
+}

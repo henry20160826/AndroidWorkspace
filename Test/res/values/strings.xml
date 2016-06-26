@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">MessageCtrl</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MessageCtrl</string>
+    <string name="light1">第一个灯</string>
+    <string name="light2">第二个灯</string>
+    <string name="light3">第三个灯</string>
+    <string name="light4">第四个灯</string>
+    <string name="btn_open">打开</string>
+    <string name="btn_close">关闭</string>
+
+</resources>

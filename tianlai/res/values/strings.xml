@@ -1,0 +1,72 @@
+<resources>
+
+    <string name="app_name">tianlai</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    <string-array name="home_stitle">
+        <item >23项游乐项目，度假景区首现重庆</item>
+        <item >两大商业中心，尽享度假生活</item>
+        <item >星级主题酒店群，开创奢华体验</item>
+        <item >49万方MINI别墅，回归真我</item>
+    </string-array>
+    
+    <array name="home_img">
+        <item >@drawable/tianlai_tb1</item>
+        <item >@drawable/tianlai_tb2</item>
+        <item >@drawable/tianlai_tb3</item>
+        <item >@drawable/tianlai_tb4</item>
+    </array>
+    <array name="introduce">
+        <item>A 1-负 1-1 一室一厅一卫</item>
+        <item>A 1-1 F-1 两室一厅一卫</item>
+        <item>B 1-负 1-1 一室一厅一卫</item>
+        <item>B 1-1 F-2 一室两厅一卫</item>
+        <item>B 1-1 F-3 一室一厅一卫</item>
+        <item>B 2-1 F-1 一室一厅一卫</item>
+        <item>C 1-负 1-1 一室两厅一卫</item>
+        <item>C 1-负 1-2 一室两厅一卫</item>
+        <item>C 1-1 F-1 两室两厅一卫</item>
+        <item>C 1-1 F-2 一室一厅一卫</item>
+        <item>C 1-1 F-3 一室两厅一卫</item>
+        <item>C 1-3F/4F-1 一室一厅一卫</item>
+    </array>
+    <array name="type">
+        <item>联合开发商</item>
+        <item>联合开发商</item>
+        <item>规划设计</item>
+        <item>景观设计</item>
+        <item>全案代理  营销顾问</item>
+    </array>
+    <array name="cname">
+        <item>重庆福星集团</item>
+        <item>重庆中旅集团</item>
+        <item>加拿大艾克斯蒂</item>
+        <item>日清景观（澳洲）\n重庆博建建筑公司</item>
+        <item>天英地产  英联机构</item>
+    </array>
+    <array name="music_name">
+        <item>天籁谷之恋</item>
+        <item>天籁森林</item>
+        <item>天籁湖滨</item>   
+        <item>高山瀑布</item>   
+    </array>   
+        <string name="home0">提升旅游趣味，服务游人消费娱乐</string>   
+        <string name="home1">整体商业布局，服务100万游人消费娱乐</string>   
+        <string name="home2">联合国际知名酒店品牌，打造奢华旅游</string>   
+        <string name="home3">天籁谷为你打造23项旅游娱乐项目</string>   
+        <string name="title_contact">联系我们</string>   
+        <string name="_023_68912388">023-68912388</string>   
+        <string name="hubinmeishu">湖滨美墅首次面世</string>   
+        <string name="tianlaimusic">天籁之音</string>   
+        <string name="tianlai_show">天籁展示</string>   
+        <string name="guanyinqiao">"    重庆主城观音桥展区"</string>   
+        <string name="jiangbei">江北观音桥晴朗广场</string>   
+        <string name="heishangu">"    重庆万盛黑山谷"</string>   
+        <string name="daiweisi">黑山谷南门戴维斯圣杰温泉大酒店</string>   
+        <string name="title_introduce">户型介绍</string>   
+        <string name="huxingimage">户型图</string>   
+        <string name="title_map">区域地图</string>   
+        <string name="title_team">设计团队</string>
+</resources>

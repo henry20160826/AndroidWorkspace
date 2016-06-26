@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SendFile.java&apos; to &apos;MyPhone/src/hu.network&apos;&#x0D;&#x0A;- Original project: &apos;MyClient&apos;&#x0D;&#x0A;- Destination element: &apos;MyPhone/src/hu.network&apos;&#x0D;&#x0A;- Original element: &apos;hu.network.SendFile.java&apos;" description="Copy compilation unit" destination="=MyPhone/src&lt;hu.network" element1="/src&lt;hu.network{SendFile.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1401103090513" units="1" version="1.0"/>
+</session>

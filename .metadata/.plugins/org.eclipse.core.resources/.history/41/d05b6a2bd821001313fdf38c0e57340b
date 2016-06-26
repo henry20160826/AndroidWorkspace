@@ -1,0 +1,6 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <string name="btHeight">48dp</string>
+    <string name="btWidth">80dp</string>
+</resources>

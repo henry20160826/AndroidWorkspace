@@ -1,0 +1,55 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.order_dishes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+    <!-- 推荐使用最新版本 -->
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <!-- 要写明是否允许备份文件 -->
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/icon_eat"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hu.activity.LoginActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hu.activity.TableActivity"
+            android:label="@string/title_activity_table"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.hu.activity.DishesActivity"
+            android:label="@string/title_activity_dishes"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.hu.activity.BillActivity"
+            android:label="@string/title_activity_bill"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="title">
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="num">
+        <item name="android:textSize">15dp</item>
+        <item name="android:padding">3dp</item>
+    </style> 
+    <style name="time">
+	    <item name="android:textSize">15dp</item>       
+    </style>
+    <style name="clas">
+        <item name="android:textSize">15dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:padding">2dp</item>
+    </style>
+</resources>

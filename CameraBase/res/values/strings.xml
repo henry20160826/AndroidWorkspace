@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CameraBase</string>
+    <string name="hello_world">Hello!</string>
+    <string name="menu_1">开始摄像</string>
+    <string name="menu_2">关闭摄像</string>
+	<string name="menu_3">发送位置</string>
+	<string name="menu_4">发送照片</string>
+	<string name="menu_5">继续摄像</string>
+	<string name="menu_6">no</string>
+	<string name="menu_7">no</string>
+</resources>

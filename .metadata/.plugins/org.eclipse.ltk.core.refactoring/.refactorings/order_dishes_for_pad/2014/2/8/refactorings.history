@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.hu.activity.DishesActivity.ItemClickListener&apos; to &apos;GridViewItemClickListener&apos;&#x0D;&#x0A;- Original project: &apos;order_dishes&apos;&#x0D;&#x0A;- Original element: &apos;com.hu.activity.DishesActivity.ItemClickListener&apos;&#x0D;&#x0A;- Renamed element: &apos;com.hu.activity.DishesActivity.GridViewItemClickListener&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ItemClickListener&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.hu.activity{DishesActivity.java[DishesActivity[ItemClickListener" matchStrategy="1" name="GridViewItemClickListener" qualified="false" references="true" similarDeclarations="false" stamp="1392974574621" textual="false" version="1.0"/>
+</session>

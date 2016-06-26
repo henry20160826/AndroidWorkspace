@@ -1,0 +1,65 @@
+package com.hu.toupiao;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class MainActivity extends Activity {
+
+	private Button btn_student, btn_election, btn_newelection;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		btn_student = (Button) findViewById(R.id.btn_student);
+		btn_election = (Button) findViewById(R.id.btn_election);
+		btn_newelection = (Button) findViewById(R.id.btn_newelection);
+		OnClickListener btnListner = new btnListner();
+		btn_student.setOnClickListener(btnListner);
+		btn_election.setOnClickListener(btnListner);
+		btn_newelection.setOnClickListener(btnListner);
+
+	}
+
+	class btnListner implements View.OnClickListener {
+
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.btn_student:
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this, StudentActivity.class);
+				startActivity(intent);
+				break;
+			case R.id.btn_election:
+				break;
+			case R.id.btn_newelection:
+				break;
+			default:
+				break;
+			}
+			// Toast.makeText(MainActivity.this, a+"",
+			// Toast.LENGTH_LONG).show();
+		}
+	}
+	// @Override
+	// public boolean onCreateOptionsMenu(Menu menu) {
+	// getMenuInflater().inflate(R.menu.activity_main, menu);
+	// return true;
+	// }
+	//
+	// @Override
+	// public boolean onOptionsItemSelected(MenuItem item) {
+	// switch (item.getItemId()) {
+	// case R.id.menu_settings:
+	// NavUtils.navigateUpFromSameTask(this);
+	// break;
+	// }
+	// return super.onOptionsItemSelected(item);
+	// }
+
+}

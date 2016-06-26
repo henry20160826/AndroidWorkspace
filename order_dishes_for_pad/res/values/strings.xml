@@ -1,0 +1,171 @@
+<resources>
+
+    <string name="app_name">点菜系统</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <!-- <string name="title_activity_login"></string> -->
+    <string name="title_activity_table">请选择餐桌</string>
+    <string name="title_activity_dishes">请选择菜品</string>
+    <string name="title_activity_bill">这是您的菜单</string>
+    <string name="username">账户</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="back">返回</string>
+    <string name="ok">确定</string>
+    <string name="yidian">已点菜品</string>
+    <string name="zongjia">总价：</string>
+    <string name="shuliang">数量：</string>
+    <string name="gong">共</string>
+    <string name="yuan">元</string>
+    <string name="ling">0</string>
+    <string name="daocai">道菜</string>
+    <string name="caipin">菜品</string>
+    <string name="jiushui">酒水</string>
+    <string name="zhushi">主食</string>
+
+    <string-array name="imageOfDish">
+        <item>@drawable/dongporou</item>
+        <item>@drawable/duojiaoyutou</item>
+        <item>@drawable/goubaojiding</item>
+        <item>@drawable/hongshaorou</item>
+        <item>@drawable/huiguorou</item>
+        <item>@drawable/kelejichi</item>
+        <item>@drawable/koushuiji</item>
+        <item>@drawable/laziji</item>
+        <item>@drawable/mapodoufu</item>
+        <item>@drawable/shuizhuroupian</item>
+        <item>@drawable/tangculiji</item>
+        <item>@drawable/youmendaxia</item>
+        <item>@drawable/yuxiangqiezi</item>
+        <item>@drawable/yuxiangrousi</item>
+    </string-array>
+    <string-array name="nameOfDish">
+        <item>东坡肉</item>
+        <item>剁椒鱼头</item>
+        <item>宫保鸡丁</item>
+        <item>红烧肉</item>
+        <item>回锅肉</item>
+        <item>可乐鸡翅</item>
+        <item>口水鸡</item>
+        <item>辣子鸡</item>
+        <item>麻婆豆腐</item>
+        <item>水煮肉片</item>
+        <item>糖醋里脊</item>
+        <item>油焖大虾</item>
+        <item>鱼香茄子</item>
+        <item>鱼香肉丝</item>
+    </string-array>
+    <string-array name="tasteOfDish">
+        <item>香甜</item>
+        <item>香辣</item>
+        <item>甜辣</item>
+        <item>香甜</item>
+        <item>香咸</item>
+        <item>香甜</item>
+        <item>麻辣</item>
+        <item>香辣</item>
+        <item>麻辣</item>
+        <item>麻辣</item>
+        <item>香甜</item>
+        <item>浓香</item>
+        <item>甜辣</item>
+        <item>甜辣</item>
+    </string-array>
+    <string-array name="priceOfDish">
+        <item>23</item>
+        <item>25</item>
+        <item>20</item>
+        <item>24</item>
+        <item>20</item>
+        <item>27</item>
+        <item>26</item>
+        <item>28</item>
+        <item>19</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>19</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="imageOfZhushi">
+        <item>@drawable/mantou</item>
+        <item>@drawable/chaomantou</item>
+        <item>@drawable/baozi</item>
+        <item>@drawable/miantiao</item>
+        <item>@drawable/mifan</item>
+        <item>@drawable/shaobing</item>
+        <item>@drawable/guotie</item>
+        <item>@drawable/shuijiao</item>
+    </string-array>
+    <string-array name="nameOfZhushi">
+        <item>馒头</item>
+        <item>炒馒头</item>
+        <item>包子</item>
+        <item>面条</item>
+        <item>米饭</item>
+        <item>烧饼</item>
+        <item>锅贴</item>
+        <item>水饺</item>
+    </string-array>
+    <string-array name="tasteOfZhushi">
+        <item>清淡</item>
+        <item>微咸</item>
+        <item>清香</item>
+        <item>清香</item>
+        <item>清淡</item>
+        <item>微咸</item>
+        <item>微咸</item>
+        <item>清香</item>
+    </string-array>
+    <string-array name="priceOfZhushi">
+        <item>10</item>
+        <item>13</item>
+        <item>15</item>
+        <item>14</item>
+        <item>10</item>
+        <item>10</item>
+        <item>15</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="imageOfDrink">
+        <item>@drawable/maotai</item>
+        <item>@drawable/wuliangye</item>
+        <item>@drawable/jinliufu</item>
+        <item>@drawable/jiannanchun</item>
+        <item>@drawable/langjiu</item>
+        <item>@drawable/fenjiu</item>
+        <item>@drawable/luzhoulaojiao</item>
+        <item>@drawable/yinliao</item>
+    </string-array>
+    <string-array name="nameOfDrink">
+        <item>茅台</item>
+        <item>五粮液</item>
+        <item>金六福</item>
+        <item>剑南春</item>
+        <item>郎酒</item>
+        <item>汾酒</item>
+        <item>泸州老窖</item>
+        <item>饮料</item>
+    </string-array>
+    <string-array name="tasteOfDrink">
+        <item>醬香型</item>
+        <item>浓香型</item>
+        <item>清香型</item>
+        <item>米香型</item>
+        <item>其他香型</item>
+        <item>酱香型</item>
+        <item>清香型</item>
+        <item>浓香型</item>
+    </string-array>
+    <string-array name="priceOfDrink">
+        <item>2000</item>
+        <item>1500</item>
+        <item>1000</item>
+        <item>1200</item>
+        <item>900</item>
+        <item>800</item>
+        <item>1100</item>
+        <item>20</item>
+    </string-array>
+
+</resources>

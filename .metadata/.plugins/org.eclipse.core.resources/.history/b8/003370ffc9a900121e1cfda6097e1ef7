@@ -1,0 +1,396 @@
+package com.hu.activity;
+
+import static com.hu.DataClass.Content.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.hu.DBoperator.DatabaseManager;
+import com.hu.DataClass.All;
+import com.hu.DataClass.Student;
+import com.hu.toupiao.R;
+
+public class ListviewActivity extends Activity {
+
+	private ArrayList<HashMap<String, String>> arrayList;
+	public All all;
+	private SimpleAdapter listAdapter;
+	private ListView listView;
+	private int editnum;
+	private LinearLayout layout_lookup;
+	private String studentE[];
+	private Spinner spinner1;
+	private Spinner spinner2;
+	private EditText editText1;
+	private EditText editText2;
+	private Button btnLookup;
+	private Button btnShowall;
+	private Button btnGone;
+	private int item1;
+	private int item2;
+	private int info;
+
+	private String[] electionE;
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);// 隐藏标题
+		setContentView(R.layout.activity_listview);
+		all = (All) getApplication();
+		all.dbManager = new DatabaseManager(this);
+		studentE = getResources().getStringArray(R.array.studentE);
+		electionE = getResources().getStringArray(R.array.electionE);
+		Intent intent = getIntent();
+		info = intent.getExtras().getInt("info");
+		dealListview();
+		Cursor cursor;
+		if (STUDENT == info) {
+			cursor = all.dbManager.queryAll("student");
+		} else {
+			cursor = all.dbManager.queryAll("election");
+		}
+		loadArrayList(cursor);
+		dealWidget();
+	}
+
+	/* 加载控件 */
+	private void dealWidget() {
+		layout_lookup = (LinearLayout) findViewById(R.id.layout_lookup);
+		ArrayAdapter<CharSequence> arrayAdapter;
+		if (STUDENT == info) {
+			arrayAdapter = ArrayAdapter.createFromResource(this,
+					R.array.studentC, android.R.layout.simple_spinner_item);
+		} else {
+			arrayAdapter = ArrayAdapter.createFromResource(this,
+					R.array.electionC, android.R.layout.simple_spinner_item);
+		}
+		arrayAdapter
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner1 = (Spinner) findViewById(R.id.spinner1);
+		spinner1.setAdapter(arrayAdapter);
+		spinner1.setPrompt("选项");
+		spinner1.setOnItemSelectedListener(new SpinnerListener());
+		spinner2 = (Spinner) findViewById(R.id.spinner2);
+		spinner2.setAdapter(arrayAdapter);
+		spinner2.setPrompt("选项");
+		spinner2.setOnItemSelectedListener(new SpinnerListener());
+		if (ELECTION == info) {
+			TextView textView1 = (TextView) findViewById(R.id.textView1);
+			TextView textView2 = (TextView) findViewById(R.id.textView2);
+			TextView textView3 = (TextView) findViewById(R.id.textView3);
+			textView1.setText("选举号");
+			textView2.setText("内容");
+			textView3.setText("日期");
+		}
+
+		editText1 = (EditText) findViewById(R.id.editText1);
+		editText2 = (EditText) findViewById(R.id.editText2);
+		btnLookup = (Button) findViewById(R.id.btn_lookup);
+		btnLookup.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String string1 = editText1.getText().toString();
+				String string2 = editText2.getText().toString();
+				// Toast.makeText(SLookupActivity.this, string1+"#"+string2,
+				// Toast.LENGTH_LONG).show();
+				String sqlstudent = "select * from student where ";
+				String sqlelection = "select * from election where ";
+				boolean flag = false;
+				if (!string1.equals("")) {
+					sqlstudent = sqlstudent + studentE[item1] + " like " + "'%" + string1
+							+ "%'";
+					flag = true;
+				}
+				if (!string2.equals("")) {
+					if (true == flag) {
+						sqlstudent = sqlstudent + " and " + studentE[item2] + " like " + "'%"
+								+ string2 + "%'";
+					} else {
+						sqlstudent = sqlstudent + studentE[item2] + " like " + "'%" + string2
+								+ "%'";
+					}
+					flag = true;
+				}
+				if (true == flag) {
+					Cursor cursor = all.dbManager.db.rawQuery(sqlstudent, null);
+					reloadArrayList(cursor);
+				} else {
+					Toast.makeText(ListviewActivity.this, "请输入查找条件",
+							Toast.LENGTH_LONG).show();
+				}
+				flag = false;
+			}
+		});
+		btnGone = (Button) findViewById(R.id.btn_yincang);
+		btnGone.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				layout_lookup.setVisibility(View.GONE);
+			}
+		});
+		btnShowall = (Button) findViewById(R.id.btn_showall);
+		btnShowall.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Cursor cursor = all.dbManager.queryAll("student");
+				reloadArrayList(cursor);
+			}
+		});
+	}
+
+	/* 下拉列表监听者 */
+	public class SpinnerListener implements OnItemSelectedListener {
+		@Override
+		public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+				long arg3) {
+			// TODO Auto-generated method stub
+			if (arg0.getId() == spinner1.getId()) {
+				item1 = arg2;
+			} else if (arg0.getId() == spinner2.getId()) {
+				item2 = arg2;
+			}
+		}
+
+		@Override
+		public void onNothingSelected(AdapterView<?> arg0) {
+			// TODO Auto-generated method stub
+
+		}
+	}
+
+	/* 重新加载ArrayList */
+	private void reloadArrayList(Cursor cursor) {
+		arrayList.clear();
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", cursor.getString(cursor.getColumnIndex("sid")));
+			map.put("name", cursor.getString(cursor.getColumnIndex("name")));
+			map.put("classPost",
+					cursor.getString(cursor.getColumnIndex("classPost")));
+			arrayList.add(map);
+		}
+		listAdapter.notifyDataSetChanged();
+		if (cursor.getCount() == 0) {
+			Toast.makeText(ListviewActivity.this, "未找到符合条件的内容",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	/* 处理与listvew */
+	private void dealListview() {
+		listView = (ListView) findViewById(R.id.listView_student);
+		arrayList = new ArrayList<HashMap<String, String>>();
+		listAdapter = new SimpleAdapter(this, arrayList, R.layout.list_item,
+				new String[] { "name", "classPost", "sid", }, new int[] {
+						R.id.tv_0, R.id.tv_1, R.id.tv_2 });
+		listView.setAdapter(listAdapter);
+
+		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(ListviewActivity.this, SInfoActivity.class);
+				intent.putExtra("mode", EDIT);
+				intent.putExtra("sid", arrayList.get(arg2).get("sid"));
+				// Bundle bundle = new Bundle();
+				// bundle.putSerializable("student", all.students.get(arg2));
+				// intent.putExtras(bundle);
+				editnum = arg2;
+				// startActivity(intent);
+				startActivityForResult(intent, 0);
+			}
+		});
+		listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					final int arg2, long arg3) {
+				// TODO Auto-generated method stub
+				new AlertDialog.Builder(ListviewActivity.this)
+						.setTitle("提示")
+						.setMessage("是否要删除信息？")
+						.setPositiveButton("删除",
+								new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// TODO Auto-generated method stub
+										deleteItem(arg2);
+									}
+
+								})
+						.setNegativeButton("取消",
+								new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// TODO Auto-generated method stub
+
+									}
+								}).show();
+				return false;
+			}
+		});
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onResume()
+	 */
+	// @Override
+	// protected void onResume() {
+	// // TODO Auto-generated method stub
+	// super.onResume();
+	// listAdapter.notifyDataSetChanged();
+	// }
+	/* 删除条目 */
+	private void deleteItem(int arg2) {
+		all.dbManager.deleteStudent(arrayList.get(arg2).get("sid"));
+		arrayList.remove(arg2);
+		listAdapter.notifyDataSetChanged();
+		// all.students.remove(arg2);
+	}
+
+	/* 加载ArrayList */
+	private void loadArrayList(Cursor cursor) {
+		arrayList.clear();
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", cursor.getString(cursor.getColumnIndex("sid")));
+			map.put("name", cursor.getString(cursor.getColumnIndex("name")));
+			map.put("classPost",
+					cursor.getString(cursor.getColumnIndex("classPost")));
+			arrayList.add(map);
+
+			// Student s = new Student();
+			// s.sid = cursor.getString(0);
+			// s.name = cursor.getString(1);
+			// all.students.add(s);
+		}
+	}
+
+	/*
+	 * (得到返回的HashMap)
+	 * 
+	 * @see android.app.Activity#onActivityResult(int, int,
+	 * android.content.Intent)
+	 */
+
+	private HashMap<String, String> getMap(Intent data) {
+		Bundle bundle = data.getExtras();
+		String sidString = bundle.getString("sid");
+		String nameString = bundle.getString("name");
+		String classPostString = bundle.getString("classPost");
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("sid", sidString);
+		map.put("name", nameString);
+		map.put("classPost", classPostString);
+		return map;
+	}
+
+	/*
+	 * (加载菜单)
+	 * 
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		MenuInflater a = getMenuInflater();
+		a.inflate(R.menu.menu_studentactivity, menu);
+		return true;
+	}
+
+	/*
+	 * (菜单按键) 菜单按键
+	 * 
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent();
+		switch (item.getItemId()) {
+		case R.id.add:
+			intent.setClass(ListviewActivity.this, SInfoActivity.class);
+			intent.putExtra("mode", ADD);
+			// startActivity(intent);
+			startActivityForResult(intent, 0);
+			break;
+		case R.id.lookup:
+			// intent.setClass(StudentActivity.this, SLookupActivity.class);
+			// intent.putExtra("mode", LOOKUP);
+			// startActivity(intent);
+			// startActivityForResult(intent, 0);
+			layout_lookup.setVisibility(View.VISIBLE);
+			break;
+
+		default:
+			break;
+		}
+		return true;
+	}
+
+	/* 处理Activity返回值 */
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == 0) {
+			if (resultCode == ADD) {
+				HashMap<String, String> map = getMap(data);
+				arrayList.add(map);
+				listAdapter.notifyDataSetChanged();
+			} else if (resultCode == EDIT) {
+				// Toast.makeText(this, "EDIT", Toast.LENGTH_SHORT).show();
+				HashMap<String, String> map = getMap(data);
+				arrayList.set(editnum, map);
+				listAdapter.notifyDataSetChanged();
+			} else {
+				// Toast.makeText(this, resultCode, Toast.LENGTH_SHORT).show();
+			}
+		} else {
+			Toast.makeText(this, "requsetcode not 0", Toast.LENGTH_SHORT)
+					.show();
+		}
+	}
+}

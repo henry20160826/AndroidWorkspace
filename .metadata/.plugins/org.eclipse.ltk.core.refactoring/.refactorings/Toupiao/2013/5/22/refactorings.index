@@ -1,0 +1,15 @@
+1369550302253	Delete element
+1369553348130	Delete element
+1369577389400	Extract method 'tvNumsub'
+1369577444269	Rename method 'tvNumadd'
+1369577449400	Rename method 'tvNumsub'
+1369579392691	Rename method 'getreceiveRunFlag'
+1369579400963	Rename method 'setreceiveRunFlag'
+1369581192436	Extract method 'getInfo'
+1369657244377	Rename method 'exist'
+1369657257724	Rename method 'exist'
+1369658040057	Delete element
+1369668485583	Rename local variable 'len'
+1369919719745	Rename method 'getPhnoeNum'
+1369919890071	Rename method 'getinfoMidone'
+1369919909810	Rename method 'getVote'

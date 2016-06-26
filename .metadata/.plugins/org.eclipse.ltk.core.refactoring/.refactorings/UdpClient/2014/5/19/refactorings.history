@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;UdpThread.java&apos; to &apos;order_dishes_for_pad/src/com.hu.udp&apos;&#x0D;&#x0A;- Original project: &apos;UdpClient&apos;&#x0D;&#x0A;- Destination element: &apos;order_dishes_for_pad/src/com.hu.udp&apos;&#x0D;&#x0A;- Original element: &apos;UdpThread.java&apos;" description="Copy compilation unit" destination="=order_dishes_for_pad/src&lt;com.hu.udp" element1="/src&lt;{UdpThread.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1399439759837" units="1" version="1.0"/>
+</session>

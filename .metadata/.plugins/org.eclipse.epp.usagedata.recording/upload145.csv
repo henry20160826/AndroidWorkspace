@@ -1,0 +1,268 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1392974653249
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1392974654896
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1392974657863
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392974669685
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392974675903
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392974678346
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1392974680914
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1392974682257
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.format",1392974684024
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392974684765
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392974710136
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392974734404
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.cut",1392974746313
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1392974747741
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.format",1392974753282
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392974757737
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.format",1392974763515
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392974764056
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974767573
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974769036
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974769737
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974780322
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974785563
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974785762
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392974807559
+started,bundle,org.eclipse.wst.ws.service.policy.ui,1.0.300.v201108240515,"org.eclipse.wst.ws.service.policy.ui",1392974810189
+started,bundle,org.eclipse.wst.ws.service.policy,1.0.303.v201009221810,"org.eclipse.wst.ws.service.policy",1392974810224
+started,bundle,org.eclipse.wst.command.env,1.0.409.v201004211805,"org.eclipse.wst.command.env",1392974810483
+started,bundle,org.eclipse.wst.ws,1.1.203.v201004211805,"org.eclipse.wst.ws",1392974810484
+started,bundle,org.eclipse.compare,3.5.201.R37x_v20110817-0800,"org.eclipse.compare",1392974812418
+started,bundle,com.android.ide.eclipse.ddms,20.0.3.v201208082019-427395,"com.android.ide.eclipse.ddms",1392974816073
+executed,command,,,"com.android.ide.eclipse.adt.debug.launching.LaunchShortcut.run",1392974816125
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392974816301
+started,bundle,com.android.ide.eclipse.traceview,20.0.3.v201208082019-427395,"com.android.ide.eclipse.traceview",1392974825048
+opened,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1392974826070
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1392974826151
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392974828539
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974829890
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974831792
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974832095
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974833482
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1392974833584
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392974834591
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974835417
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974836022
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392974837789
+executed,command,,,"com.android.ide.eclipse.adt.debug.launching.LaunchShortcut.run",1392974839835
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974839905
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974841236
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974841705
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974843331
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1392974843417
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974844294
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974844397
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392974844869
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392974845761
+executed,command,,,"com.android.ide.eclipse.adt.debug.launching.LaunchShortcut.run",1392974847736
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974847889
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974849075
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974849481
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974851909
+opened,view,com.android.ide.eclipse.ddms,20.0.3.v201208082019-427395,"com.android.ide.eclipse.ddms.views.LogCatView",1392974863418
+activated,view,com.android.ide.eclipse.ddms,20.0.3.v201208082019-427395,"com.android.ide.eclipse.ddms.views.LogCatView",1392974863457
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392974877873
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974879583
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974903366
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392974907841
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392974908382
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974911223
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974915161
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974920772
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392974923226
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392975659780
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392975792565
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392975797666
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392975899606
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392975901749
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1392975907735
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392975909933
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976087516
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976087562
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976088354
+activated,editor,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.editors.CommonXmlEditor",1392976089823
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392976100210
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392976102250
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392976105706
+executed,command,org.eclipse.wst.sse.ui,1.3.2.v201201041522,"org.eclipse.wst.sse.ui.format.document",1392976107822
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392976108396
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976117348
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976418354
+error,log,,,"Unhandled event loop exception",1392976435903
+error,log,,,"Unhandled event loop exception",1392976435932
+error,log,,,"Unhandled event loop exception",1392976436113
+error,log,,,"Unhandled event loop exception",1392976442389
+error,log,,,"Unhandled event loop exception",1392976442417
+error,log,,,"Unhandled event loop exception",1392976442440
+error,log,,,"Unhandled event loop exception",1392976442448
+error,log,,,"Unhandled event loop exception",1392976442455
+error,log,,,"Unhandled event loop exception",1392976442835
+error,log,,,"Unhandled event loop exception",1392976447059
+error,log,,,"Unhandled event loop exception",1392976448177
+error,log,,,"Unhandled event loop exception",1392976448217
+error,log,,,"Unhandled event loop exception",1392976448258
+error,log,,,"Unhandled event loop exception",1392976448338
+error,log,,,"Unhandled event loop exception",1392976448609
+error,log,,,"Unhandled event loop exception",1392976462386
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392976463581
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1392976470264
+error,log,,,"Unhandled event loop exception",1392976481733
+error,log,,,"Unhandled event loop exception",1392976481946
+error,log,,,"Unhandled event loop exception",1392976481968
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392976483695
+error,log,,,"Unhandled event loop exception",1392976483738
+error,log,,,"Unhandled event loop exception",1392976483780
+error,log,,,"Unhandled event loop exception",1392976483848
+error,log,,,"Unhandled event loop exception",1392976484286
+error,log,,,"Unhandled event loop exception",1392976484294
+error,log,,,"Unhandled event loop exception",1392976493559
+error,log,,,"Unhandled event loop exception",1392976501549
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976507907
+activated,editor,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.editors.CommonXmlEditor",1392976508629
+error,log,,,"Unhandled event loop exception",1392976510013
+executed,command,org.eclipse.wst.sse.ui,1.3.2.v201201041522,"org.eclipse.wst.sse.ui.format.document",1392976511775
+error,log,,,"Unhandled event loop exception",1392976511834
+error,log,,,"Unhandled event loop exception",1392976511844
+error,log,,,"Unhandled event loop exception",1392976512346
+error,log,,,"Unhandled event loop exception",1392976512355
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392976512600
+error,log,,,"Unhandled event loop exception",1392976512641
+error,log,,,"Unhandled event loop exception",1392976512710
+error,log,,,"Unhandled event loop exception",1392976512753
+error,log,,,"Unhandled event loop exception",1392976513152
+error,log,,,"Unhandled event loop exception",1392976513160
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976516381
+closed,editor,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.editors.CommonXmlEditor",1392976516382
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392976518211
+opened,editor,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.editors.CommonXmlEditor",1392976522758
+activated,editor,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.editors.CommonXmlEditor",1392976522897
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976531495
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976534139
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1392976537050
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976538208
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976540870
+started,bundle,org.eclipse.wst.html.ui,1.0.602.v201202091936,"org.eclipse.wst.html.ui",1392976545052
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976549259
+closed,editor,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.editors.CommonXmlEditor",1392976549259
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976550802
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976647316
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976647532
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976649673
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976649673
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392976650998
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976650998
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976667074
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976669711
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976670150
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976728280
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976741805
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976741841
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1392976748591
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1392976748591
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976749919
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976751666
+closed,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1392976751873
+stopped,bundle,org.eclipse.jst.ws.axis.creation.ui,1.0.700.v201104070312,"org.eclipse.jst.ws.axis.creation.ui",1392976754829
+stopped,bundle,org.eclipse.jst.ws.axis.consumption.ui,1.0.505.v201004211805,"org.eclipse.jst.ws.axis.consumption.ui",1392976754872
+stopped,bundle,org.eclipse.jst.ws.axis.consumption.core,1.0.407.v201104071820,"org.eclipse.jst.ws.axis.consumption.core",1392976754910
+activated,perspective,org.eclipse.jdt.ui,,"org.eclipse.jdt.ui.JavaPerspective",1393159377213
+started,bundle,org.eclipse.osgi,3.7.1.R37x_v20110808-1106,"org.eclipse.osgi",1393159377213
+started,bundle,org.eclipse.equinox.simpleconfigurator,1.0.200.v20110502-1955,"org.eclipse.equinox.simpleconfigurator",1393159377213
+started,bundle,com.ibm.icu,4.4.2.v20110208,"com.ibm.icu",1393159377213
+started,bundle,org.eclipse.core.contenttype,3.4.100.v20110423-0524,"org.eclipse.core.contenttype",1393159377213
+started,bundle,org.eclipse.core.databinding.observable,1.4.0.I20110222-0800,"org.eclipse.core.databinding.observable",1393159377228
+started,bundle,org.eclipse.core.expressions,3.4.300.v20110228,"org.eclipse.core.expressions",1393159377228
+started,bundle,org.eclipse.core.filebuffers,3.5.200.v20110505-0800,"org.eclipse.core.filebuffers",1393159377228
+started,bundle,org.eclipse.core.filesystem,1.3.100.v20110423-0524,"org.eclipse.core.filesystem",1393159377228
+started,bundle,org.eclipse.core.jobs,3.5.100.v20110404,"org.eclipse.core.jobs",1393159377228
+started,bundle,org.eclipse.core.net,1.2.100.I20110511-0800,"org.eclipse.core.net",1393159377228
+started,bundle,org.eclipse.core.resources,3.7.100.v20110510-0712,"org.eclipse.core.resources",1393159377244
+started,bundle,org.eclipse.core.runtime,3.7.0.v20110110,"org.eclipse.core.runtime",1393159377244
+started,bundle,org.eclipse.core.runtime.compatibility,3.2.100.v20100505,"org.eclipse.core.runtime.compatibility",1393159377244
+started,bundle,org.eclipse.core.runtime.compatibility.auth,3.2.200.v20110110,"org.eclipse.core.runtime.compatibility.auth",1393159377244
+started,bundle,org.eclipse.debug.core,3.7.0.v20110518,"org.eclipse.debug.core",1393159377259
+started,bundle,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui",1393159377259
+started,bundle,org.eclipse.epp.usagedata.gathering,1.3.1.R201106061540,"org.eclipse.epp.usagedata.gathering",1393159377259
+started,bundle,org.eclipse.epp.usagedata.recording,1.3.1.R201106061540,"org.eclipse.epp.usagedata.recording",1393159377259
+started,bundle,org.eclipse.equinox.app,1.3.100.v20110321,"org.eclipse.equinox.app",1393159377259
+started,bundle,org.eclipse.equinox.common,3.6.0.v20110523,"org.eclipse.equinox.common",1393159377259
+started,bundle,org.eclipse.equinox.ds,1.3.1.R37x_v20110701,"org.eclipse.equinox.ds",1393159377259
+started,bundle,org.eclipse.equinox.event,1.2.100.v20110502,"org.eclipse.equinox.event",1393159377259
+started,bundle,org.eclipse.equinox.p2.core,2.1.0.v20110502-1955,"org.eclipse.equinox.p2.core",1393159377259
+started,bundle,org.eclipse.equinox.p2.directorywatcher,1.0.300.v20110502-1955,"org.eclipse.equinox.p2.directorywatcher",1393159377259
+started,bundle,org.eclipse.equinox.p2.reconciler.dropins,1.1.100.v20110510,"org.eclipse.equinox.p2.reconciler.dropins",1393159377259
+started,bundle,org.eclipse.equinox.preferences,3.4.1.R37x_v20110725,"org.eclipse.equinox.preferences",1393159377259
+started,bundle,org.eclipse.equinox.registry,3.5.101.R37x_v20110810-1611,"org.eclipse.equinox.registry",1393159377259
+started,bundle,org.eclipse.equinox.security,1.1.1.R37x_v20110822-1018,"org.eclipse.equinox.security",1393159377603
+started,bundle,org.eclipse.equinox.util,1.0.300.v20110502,"org.eclipse.equinox.util",1393159377603
+started,bundle,org.eclipse.help,3.5.100.v20110426,"org.eclipse.help",1393159377634
+started,bundle,org.eclipse.jdt.apt.core,3.3.500.v20110420-1015,"org.eclipse.jdt.apt.core",1393159377634
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.0.400.v20110305-1450,"org.eclipse.jdt.apt.pluggable.core",1393159377634
+started,bundle,org.eclipse.jdt.core,3.7.1.v_B76_R37x,"org.eclipse.jdt.core",1393159377649
+started,bundle,org.eclipse.jdt.core.manipulation,1.4.0.v20110505-0800,"org.eclipse.jdt.core.manipulation",1393159377649
+started,bundle,org.eclipse.jdt.launching,3.6.1.v20110803_r371,"org.eclipse.jdt.launching",1393159377649
+started,bundle,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui",1393159377665
+started,bundle,org.eclipse.jface,3.7.0.I20110522-1430,"org.eclipse.jface",1393159377665
+started,bundle,org.eclipse.jsch.core,1.1.300.I20110514-0800,"org.eclipse.jsch.core",1393159377681
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.201.r371_v20110824-0800,"org.eclipse.ltk.core.refactoring",1393159377681
+started,bundle,org.eclipse.ltk.ui.refactoring,3.6.0.v20110505-0800,"org.eclipse.ltk.ui.refactoring",1393159377696
+started,bundle,org.eclipse.mylyn.bugzilla.core,3.6.2.v20110903-0100,"org.eclipse.mylyn.bugzilla.core",1393159377696
+started,bundle,org.eclipse.mylyn.bugzilla.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.bugzilla.ui",1393159377696
+started,bundle,org.eclipse.mylyn.commons.identity,0.8.0.v20110608-1400,"org.eclipse.mylyn.commons.identity",1393159377696
+started,bundle,org.eclipse.mylyn.commons.net,3.6.0.v20110608-1400,"org.eclipse.mylyn.commons.net",1393159377696
+started,bundle,org.eclipse.mylyn.commons.ui,3.6.1.v20110720-0100,"org.eclipse.mylyn.commons.ui",1393159377696
+started,bundle,org.eclipse.mylyn.context.core,3.6.1.v20110720-0100,"org.eclipse.mylyn.context.core",1393159377696
+started,bundle,org.eclipse.mylyn.context.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.context.ui",1393159377696
+started,bundle,org.eclipse.mylyn.monitor.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.monitor.ui",1393159377696
+started,bundle,org.eclipse.mylyn.tasks.ui,3.6.2.v20110826-0100,"org.eclipse.mylyn.tasks.ui",1393159377712
+started,bundle,org.eclipse.pde.launching,3.6.0.v20110506,"org.eclipse.pde.launching",1393159377712
+started,bundle,org.eclipse.pde.ui,3.6.100.v20110603,"org.eclipse.pde.ui",1393159377759
+started,bundle,org.eclipse.search,3.7.0.v20110505-0800,"org.eclipse.search",1393159377868
+started,bundle,org.eclipse.team.core,3.6.0.I20110525-0800,"org.eclipse.team.core",1393159377868
+started,bundle,org.eclipse.team.cvs.core,3.3.400.I20110510-0800,"org.eclipse.team.cvs.core",1393159377868
+started,bundle,org.eclipse.team.cvs.ui,3.3.400.I20110510-0800,"org.eclipse.team.cvs.ui",1393159377883
+started,bundle,org.eclipse.team.ui,3.6.100.I20110525-0800,"org.eclipse.team.ui",1393159377915
+started,bundle,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui",1393159377930
+started,bundle,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console",1393159377930
+started,bundle,org.eclipse.ui.editors,3.7.0.v20110517-0800,"org.eclipse.ui.editors",1393159378149
+started,bundle,org.eclipse.ui.forms,3.5.100.v20110425,"org.eclipse.ui.forms",1393159378164
+started,bundle,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.ide",1393159378195
+started,bundle,org.eclipse.ui.net,1.2.100.I20110511-0800,"org.eclipse.ui.net",1393159378195
+started,bundle,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views",1393159378195
+started,bundle,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.ui.views.log",1393159378211
+started,bundle,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"org.eclipse.ui.workbench",1393159378211
+started,bundle,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.workbench.texteditor",1393159378273
+started,bundle,com.android.ide.eclipse.adt,20.0.3.v201208082019-427395,"com.android.ide.eclipse.adt",1393159378273
+started,bundle,com.android.ide.eclipse.base,20.0.3.v201208082019-427395,"com.android.ide.eclipse.base",1393159378273
+os,sysinfo,,,"win32",1393159378289
+arch,sysinfo,,,"x86",1393159378289
+ws,sysinfo,,,"win32",1393159378289
+locale,sysinfo,,,"zh_CN",1393159378289
+processors,sysinfo,,,"2",1393159378289
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1393159378289
+java.runtime.version,sysinfo,,,"1.6.0_02-b06",1393159378289
+java.specification.name,sysinfo,,,"Java Platform API Specification",1393159378289
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1393159378289
+java.specification.version,sysinfo,,,"1.6",1393159378289
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1393159378289
+java.version,sysinfo,,,"1.6.0_02",1393159378289
+java.vm.info,sysinfo,,,"mixed mode",1393159378289
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1393159378289
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1393159378289
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1393159378289
+java.vm.specification.version,sysinfo,,,"1.0",1393159378289
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1393159378289
+java.vm.version,sysinfo,,,"1.6.0_02-b06",1393159378289
+started,bundle,org.eclipse.wst.common.project.facet.core,1.4.201.v201201101553,"org.eclipse.wst.common.project.facet.core",1393159378492
+started,bundle,org.eclipse.wst.web,1.1.501.v201201190400,"org.eclipse.wst.web",1393159378757
+started,bundle,org.eclipse.jst.ws.jaxws.utils,1.0.0.v201004171919,"org.eclipse.jst.ws.jaxws.utils",1393159378835
+started,bundle,org.eclipse.mylyn.team.ui,3.6.1.v20110825-0100,"org.eclipse.mylyn.team.ui",1393159378929
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1393159379053
+started,bundle,org.eclipse.update.configurator,3.3.100.v20100512,"org.eclipse.update.configurator",1393159381066
+started,bundle,org.eclipse.update.core,3.2.500.v20110330,"org.eclipse.update.core",1393159381113
+opened,view,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.views.ProblemView",1393159381643
+started,bundle,org.eclipse.emf.common,2.7.0.v20120127-1122,"org.eclipse.emf.common",1393159384669
+started,bundle,org.eclipse.emf.ecore,2.7.0.v20120127-1122,"org.eclipse.emf.ecore",1393159385668
+started,bundle,org.eclipse.emf.ecore.xmi,2.7.0.v20120127-1122,"org.eclipse.emf.ecore.xmi",1393159387306
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.200.v201103170302,"org.eclipse.jst.common.project.facet.core",1393159387555

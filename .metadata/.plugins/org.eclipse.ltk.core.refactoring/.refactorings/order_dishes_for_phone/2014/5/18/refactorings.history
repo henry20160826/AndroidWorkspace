@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.example.order_dishes_for_phone&apos; to &apos;com.hu.activity&apos;&#x0D;&#x0A;- Original project: &apos;order_dishes_for_phone&apos;&#x0D;&#x0A;- Original element: &apos;order_dishes_for_phone/src/com.example.order_dishes_for_phone&apos;&#x0D;&#x0A;- Renamed element: &apos;order_dishes_for_phone/src/com.hu.activity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.example.order_dishes_for_phone&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.example.order_dishes_for_phone" name="com.hu.activity" qualified="false" references="true" stamp="1399017560591" textual="false" version="1.0"/>
+</session>

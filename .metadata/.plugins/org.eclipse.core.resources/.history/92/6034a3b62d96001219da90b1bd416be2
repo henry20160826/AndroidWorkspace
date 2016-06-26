@@ -1,0 +1,108 @@
+package com.hu.toupiao;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import com.hu.DBoperator.DatabaseManager;
+import com.hu.DataClass.Student;
+
+public class StudentActivity extends Activity {
+
+	private DatabaseManager dbManager;
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_student);
+		ListView listView = (ListView) findViewById(R.id.listView_student);
+		dbManager = new DatabaseManager(this);
+		Student s = new Student();
+		s.sid = "2010210730";
+		s.name = "ºúÇå»ª";
+		List<Student> students = new ArrayList<Student>();
+		students.add(s);
+		dbManager.add(students);
+		ArrayList<HashMap<String, String>> arrayList = new ArrayList<HashMap<String, String>>();
+		Cursor cursor = dbManager.queryTheCursor("student");
+		// cursor.moveToFirst();
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", cursor.getString(0));
+			map.put("name", cursor.getString(1));
+			arrayList.add(map);
+		}
+		ListAdapter listAdapter = new SimpleAdapter(this, arrayList,
+				R.layout.list_student, new String[] { "sid", "name", },
+				new int[] { R.id.tv_sid, R.id.tv_name });
+		listView.setAdapter(listAdapter);
+		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		MenuInflater a = getMenuInflater();
+		a.inflate(R.menu.menu_studentactivity, menu);
+		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()) {
+		case R.id.add:
+			Intent intent = new Intent();
+			intent.setClass(StudentActivity.this, SInfoActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.lookup:
+
+			break;
+
+		default:
+			break;
+		}
+		return true;
+	}
+
+}

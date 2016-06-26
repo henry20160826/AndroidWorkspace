@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdgeLength="0sp"
+    android:orientation="vertical" >
+
+    <ViewFlipper android:id="@+id/ViewFlipper00"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent">
+                 <include
+                     layout="@layout/k_green1"></include>
+                 <include
+                     layout="@layout/k_green2"></include>
+    	</ViewFlipper>
+</LinearLayout>

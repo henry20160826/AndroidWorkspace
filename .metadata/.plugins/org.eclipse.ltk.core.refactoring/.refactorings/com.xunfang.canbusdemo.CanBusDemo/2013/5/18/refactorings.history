@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.xunfang.canbusdemo.CanbusManager&apos; to &apos;CanbusLinux&apos;&#x0D;&#x0A;- Original project: &apos;com.xunfang.canbusdemo.CanBusDemo&apos;&#x0D;&#x0A;- Original element: &apos;com.xunfang.canbusdemo.CanbusManager&apos;&#x0D;&#x0A;- Renamed element: &apos;com.xunfang.canbusdemo.CanbusLinux&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CanbusManager&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.xunfang.canbusdemo{CanbusManager.java[CanbusManager" matchStrategy="1" name="CanbusLinux" qualified="false" references="true" similarDeclarations="false" stamp="1367593867996" textual="false" version="1.0"/>
+</session>

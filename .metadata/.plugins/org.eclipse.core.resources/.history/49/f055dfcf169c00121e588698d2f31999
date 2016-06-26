@@ -1,0 +1,198 @@
+package com.hu.toupiao;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.Toast;
+
+import com.hu.DBoperator.DatabaseManager;
+import com.hu.DataClass.All;
+import com.hu.DataClass.Student;
+
+public class StudentActivity extends Activity {
+
+	private ArrayList<HashMap<String, String>> arrayList;
+	public All all;
+	private SimpleAdapter listAdapter;
+	private ListView listView;
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);// 隐藏标题
+		setContentView(R.layout.activity_student);
+		listView = (ListView) findViewById(R.id.listView_student);
+		all = (All) getApplication();
+		all.dbManager = new DatabaseManager(this);
+		// Student s = new Student();
+		// s.sid = "2010210730";
+		// s.name = "胡清华";
+		all.students = new ArrayList<Student>();
+		// students.add(s);
+		// try {
+		// dbManager.add(students);
+		// } catch (Exception e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		arrayList = new ArrayList<HashMap<String, String>>();
+		Cursor cursor = all.dbManager.queryTheCursor("student");
+		// cursor.moveToFirst();
+		readDB(cursor);
+		listAdapter = new SimpleAdapter(this, arrayList,
+				R.layout.list_student, new String[] { "sid", "name", },
+				new int[] { R.id.tv_sid, R.id.tv_name });
+		listView.setAdapter(listAdapter);
+		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(StudentActivity.this, SInfoActivity.class);
+				intent.putExtra("mode", "edit");
+				Bundle bundle = new Bundle();
+				bundle.putSerializable("student", all.students.get(arg2));
+				intent.putExtras(bundle);
+				// startActivity(intent);
+				startActivityForResult(intent, 0);
+			}
+		});
+		listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					final int arg2, long arg3) {
+				// TODO Auto-generated method stub
+				new AlertDialog.Builder(StudentActivity.this)
+						.setTitle("提示")
+						.setMessage("是否要删除信息？")
+						.setPositiveButton("删除",
+								new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// TODO Auto-generated method stub
+										deleteItem(arg2);
+										all.dbManager.deleteStudent(all.students.get(arg2).sid));
+									}
+
+
+								})
+						.setNegativeButton("取消",
+								new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// TODO Auto-generated method stub
+
+									}
+								}).show();
+				return false;
+			}
+		});
+
+	}
+	private void deleteItem(int arg2) {
+		arrayList.remove(arg2);
+		listAdapter.notifyDataSetChanged();
+	}
+	private void readDB(Cursor cursor) {
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("sid", cursor.getString(0));
+			map.put("name", cursor.getString(1));
+			Student s = new Student();
+			s.sid = cursor.getString(0);
+			s.name = cursor.getString(1);
+			all.students.add(s);
+			arrayList.add(map);
+		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onActivityResult(int, int,
+	 * android.content.Intent)
+	 */
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == 0) {
+			if (resultCode == RESULT_OK) {
+				Toast.makeText(this, "Send SMS RESULT_OK", Toast.LENGTH_SHORT)
+						.show();
+			} else if (resultCode == RESULT_CANCELED) {
+				Toast.makeText(this, "result cancel", Toast.LENGTH_SHORT)
+						.show();
+			} else {
+				Toast.makeText(this, resultCode, Toast.LENGTH_SHORT).show();
+			}
+		} else {
+			Toast.makeText(this, "requsetcode not 0", Toast.LENGTH_SHORT)
+					.show();
+		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		MenuInflater a = getMenuInflater();
+		a.inflate(R.menu.menu_studentactivity, menu);
+		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()) {
+		case R.id.add:
+			Intent intent = new Intent();
+			intent.setClass(StudentActivity.this, SInfoActivity.class);
+			intent.putExtra("mode", "add");
+			startActivity(intent);
+			break;
+		case R.id.lookup:
+
+			break;
+
+		default:
+			break;
+		}
+		return true;
+	}
+
+}

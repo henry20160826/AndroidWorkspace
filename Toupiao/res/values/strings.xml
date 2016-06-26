@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name">Toupiao</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">班级管理</string>
+
+    <string-array name="studentC">
+        <item>学号</item>
+        <item>姓名</item>
+        <item>手机号</item>
+        <item>班级职务</item>
+        <item>学校职务</item>
+        <item>政治面貌</item>
+        <item>党课状态</item>
+    </string-array>
+    <string-array name="studentE">
+        <item>sid</item>
+        <item>name</item>
+        <item>phone</item>
+        <item>classPost</item>
+        <item>schoolPost</item>
+        <item>politicalStatus</item>
+        <item>PartyClass</item>
+    </string-array>
+    <string-array name="electionC">
+        <item>选举号</item>
+        <item>选举内容</item>
+        <item>日期</item>
+    </string-array>
+    <string-array name="electionE">
+        <item>eid</item>
+        <item>info</item>
+        <item>date</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/loginback">
+    
+    <TableLayout 
+        android:layout_marginTop="150dip"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <TableRow >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/username"/>
+            <EditText 
+                android:id="@+id/username"
+                android:text="admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/userinput"
+                android:inputType="text"/>
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/down"/>
+        </TableRow>
+        
+        <TableRow >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/password" />
+            <EditText 
+                android:id="@+id/password"
+                android:text="admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/passinput"
+                android:layout_span="2"   
+                android:inputType="textPassword" />"
+        </TableRow>
+        
+    </TableLayout>
+    
+    <ImageButton 
+        android:id="@+id/submit"
+        android:adjustViewBounds="true"
+        android:padding="0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:src="@drawable/submit"/>
+</LinearLayout>

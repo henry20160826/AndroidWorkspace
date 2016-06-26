@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">xf_io_demo</string>
+	<string name="quit">退出</string>
+</resources>

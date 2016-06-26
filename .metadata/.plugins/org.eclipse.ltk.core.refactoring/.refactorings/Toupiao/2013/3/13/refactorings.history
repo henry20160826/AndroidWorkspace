@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.hu.DBHelper&apos; to &apos;com.hu.DBoperator&apos;&#x0D;&#x0A;- Original project: &apos;Toupiao&apos;&#x0D;&#x0A;- Original element: &apos;Toupiao/src/com.hu.DBHelper&apos;&#x0D;&#x0A;- Renamed element: &apos;Toupiao/src/com.hu.DBoperator&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.hu.DBHelper&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.hu.DBHelper" name="com.hu.DBoperator" qualified="false" references="true" stamp="1364194130808" textual="false" version="1.0"/>
+</session>

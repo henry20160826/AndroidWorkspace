@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainscreen_bg"
+    android:orientation="vertical" 
+    android:gravity="center">
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="20.0dip"
+	    android:background="@drawable/bg_sub_sys_main_common"
+	    android:orientation="vertical">
+	    <RelativeLayout
+	        android:layout_width="fill_parent" android:layout_height="wrap_content"
+	        android:layout_marginTop="10.0dip">
+			<TextView android:id="@+id/pin1_tv"
+			    android:layout_width="60.0dip" android:layout_height="wrap_content"
+			    android:text="PIN1" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_marginLeft="30.0dip"/>
+			<TextView android:id="@+id/pin3_tv"
+			    android:layout_width="60.0dip" android:layout_height="wrap_content"
+			    android:text="PIN3" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin1_tv" android:layout_marginLeft="20.0dip"/>
+			<TextView android:id="@+id/pin5_tv" android:gravity="center"
+			    android:layout_width="60.0dip" android:layout_height="wrap_content"
+			    android:text="PIN5" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin3_tv" android:layout_marginLeft="10.0dip"/>
+			<TextView android:id="@+id/pin7_tv"
+			    android:layout_width="60.0dip" android:layout_height="wrap_content"
+			    android:text="PIN7" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin5_tv" android:layout_marginLeft="30.0dip"/>	
+		</RelativeLayout>
+		<RelativeLayout
+		    android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:layout_marginTop="10.0dip">
+			<Button android:id="@+id/pin1_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="未知" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_marginLeft="20.0dip" android:clickable="false"
+			    android:background="@drawable/btn"/>
+			<Button android:id="@+id/pin3_btn" android:clickable="false"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="未知" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin1_btn" android:layout_marginLeft="20.0dip"
+			    android:background="@drawable/btn"/>
+			<Button android:id="@+id/pin5_btn" android:clickable="false"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="未知" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin3_btn" android:layout_marginLeft="20.0dip"
+			    android:background="@drawable/btn"/>
+			<Button android:id="@+id/pin7_btn" android:clickable="false"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="未知" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin5_btn" android:layout_marginLeft="20.0dip"
+			    android:background="@drawable/btn"/>  
+			<Button android:id="@+id/read_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="read" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin7_btn" android:layout_marginLeft="30.0dip"
+			    android:background="@drawable/btn"/>       
+	    </RelativeLayout>
+	    <RelativeLayout
+		    android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+			<Button android:id="@+id/pin1_write_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="1" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_marginLeft="20.0dip" android:background="@drawable/btn"/>
+			<Button android:id="@+id/pin3_write_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="1" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin1_write_btn" android:layout_marginLeft="20.0dip"
+			    android:background="@drawable/btn"/>
+			<Button android:id="@+id/pin5_write_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="1" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin3_write_btn" android:layout_marginLeft="20.0dip"
+			    android:background="@drawable/btn"/>
+			<Button android:id="@+id/pin7_write_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="1" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin5_write_btn" android:layout_marginLeft="20.0dip"
+			    android:background="@drawable/btn"/>  
+			<Button android:id="@+id/write_btn"
+			    android:layout_width="60.0dip" android:layout_height="40.0dip"
+			    android:text="write" android:textColor="#000000" android:textSize="16sp"
+			    android:layout_toRightOf="@id/pin7_write_btn" android:layout_marginLeft="30.0dip"
+			    android:background="@drawable/btn"/>       
+	    </RelativeLayout>
+	    <RelativeLayout
+		    android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+			<CheckBox android:id="@+id/set_pin1" 
+			    android:layout_width="wrap_content" android:layout_height="wrap_content"
+			    android:layout_marginLeft="35.0dip"/>
+			<CheckBox android:id="@+id/set_pin3" android:layout_marginLeft="40.0dip"
+			    android:layout_width="wrap_content" android:layout_height="wrap_content"
+			    android:layout_toRightOf="@+id/set_pin1"/>
+			<CheckBox android:id="@+id/set_pin5" android:layout_marginLeft="40.0dip"
+			    android:layout_width="wrap_content" android:layout_height="wrap_content"
+			    android:layout_toRightOf="@+id/set_pin3"/>
+			<CheckBox android:id="@+id/set_pin7" android:layout_marginLeft="40.0dip"
+			    android:layout_width="wrap_content" android:layout_height="wrap_content"
+			    android:layout_toRightOf="@id/set_pin5"/>
+	    </RelativeLayout>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bt_dish"
+        android:layout_toLeftOf="@+id/listView1"
+        android:fadeScrollbars="false"
+        android:numColumns="3"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@color/green" >
+    </GridView>
+
+    <ImageButton
+        android:id="@+id/bt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/bt_back" />
+
+    <ImageButton
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_eat" />
+
+    <Button
+        android:id="@+id/bt_dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/bt_back"
+        android:text="@string/caipin" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt_back"
+        android:layout_alignBottom="@+id/bt_back"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="60dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_username"
+        android:layout_alignBottom="@+id/tv_username"
+        android:layout_toRightOf="@+id/tv_username"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_tablenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_state"
+        android:layout_alignBottom="@+id/tv_state"
+        android:layout_centerHorizontal="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_dishNum"
+        android:layout_alignLeft="@+id/tv_yidian"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_yidian"
+        android:layout_marginLeft="15dp"
+        android:fadeScrollbars="false"
+        android:paddingRight="10dp"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@color/green" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_yidian"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gridView1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_tablenum"
+        android:text="@string/yidian"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_dishNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_ok"
+        android:layout_toLeftOf="@+id/textView4"
+        android:text="@string/ling"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_ok"
+        android:layout_alignLeft="@+id/listView1"
+        android:text="@string/gong"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_allMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_ok"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="@string/ling"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_dishNum"
+        android:layout_alignBottom="@+id/tv_dishNum"
+        android:layout_toRightOf="@+id/tv_allMoney"
+        android:text="@string/yuan"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/listView1"
+        android:text="@string/daocai"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_ok"
+        android:layout_toLeftOf="@+id/tv_dishNum"
+        android:text="@string/gong"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/bt_drink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gridView1"
+        android:layout_toRightOf="@+id/bt_dish"
+        android:layout_marginRight="30dp"
+        android:text="@string/jiushui" />
+
+    <Button
+        android:id="@+id/bt_zhushi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_state"
+        android:layout_toRightOf="@+id/bt_drink"
+        android:text="@string/zhushi" />
+
+</RelativeLayout>

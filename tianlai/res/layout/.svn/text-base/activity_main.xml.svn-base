@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <AbsoluteLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <include layout="@layout/title_home" />
+    </AbsoluteLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/music" >
+
+        <include layout="@layout/home_01" />
+
+        <include layout="@layout/home_02" />
+
+        <include layout="@layout/home_03" />
+
+        <include layout="@layout/home_04" />
+
+        <include layout="@layout/home_05" />
+    </ViewFlipper>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/absoluteLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/viewFlipper1" >
+    </ListView>
+
+    <AbsoluteLayout
+        android:id="@+id/absoluteLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <include layout="@layout/menu_home" />
+    </AbsoluteLayout>
+
+    <AbsoluteLayout
+        android:id="@+id/music"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:visibility="gone" >
+
+        <include layout="@layout/music" />
+    </AbsoluteLayout>
+
+</RelativeLayout>

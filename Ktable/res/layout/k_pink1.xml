@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pink1"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/week1"
+        style="@style/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e5336e" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#ffffff" />
+        </TableRow>
+
+        <TextView
+            style="@style/time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5336e"
+            android:gravity="center_horizontal"
+            android:text="上午"
+            android:textColor="#ffffff" />
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                style="@style/num"
+                android:layout_width="20pt"
+                android:layout_height="fill_parent"
+                android:background="#f09c9e"
+                android:text="1-2"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/clas11"
+                style="@style/clas"
+                android:layout_height="fill_parent"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#b69193" />
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#b69193" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1" >
+
+            <TextView
+                style="@style/num"
+                android:layout_height="fill_parent"
+                android:background="#f09c9e"
+                android:text="3-4"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/clas12"
+                style="@style/clas"
+                android:layout_height="fill_parent"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+        <TextView
+            style="@style/time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5336e"
+            android:gravity="center_horizontal"
+            android:text="下午"
+            android:textColor="#ffffff" />
+
+        <TableRow
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                style="@style/num"
+                android:layout_height="fill_parent"
+                android:background="#f09c9e"
+                android:text="5-6"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/clas13"
+                style="@style/clas"
+                android:layout_height="fill_parent"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#b69193" />
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#b69193" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1" >
+
+            <TextView
+                style="@style/num"
+                android:layout_height="fill_parent"
+                android:background="#f09c9e"
+                android:text="7-8"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/clas14"
+                style="@style/clas"
+                android:layout_height="fill_parent"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+        <TextView
+            style="@style/time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5336e"
+            android:gravity="center_horizontal"
+            android:text="晚上"
+            android:textColor="#ffffff" />
+
+        <TableRow android:layout_weight="1" >
+
+            <TextView
+                style="@style/num"
+                android:layout_height="fill_parent"
+                android:background="#f09c9e"
+                android:text="9-10"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/clas15"
+                style="@style/clas"
+                android:layout_height="fill_parent"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#b69193" />
+
+            <TextView
+                android:layout_height="1dp"
+                android:background="#b69193" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1" >
+
+            <TextView
+                style="@style/num"
+                android:layout_height="fill_parent"
+                android:background="#f09c9e"
+                android:text="a-b"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/clas16"
+                style="@style/clas"
+                android:layout_height="fill_parent"
+                android:textColor="#ffffff" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

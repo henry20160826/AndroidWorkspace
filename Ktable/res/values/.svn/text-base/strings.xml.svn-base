@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kinghua</string>
+    <string name="KtableE">Ktable</string>
+    <string name="KtableC">清华课表</string>
+    <string name="hello">欢迎使用清华课表</string>
+    <string name="enterK">进入</string>
+
+    <string-array name="num">
+        <item>一二节</item>
+        <item>三四节</item>
+        <item>五六节</item>
+        <item>七八节</item>
+        <item>九十节</item>
+        <item>十一二节</item>
+    </string-array>
+    <string-array name="week">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期天</item>
+    </string-array>
+    <string-array name="clas">
+        <item>低频电子电路\n \n \n \n数据库\n</item>
+        <item>数字电路与逻辑设计\n \n数值计算方法\n(三节连上)\nC++程序设计\n\n</item>
+        <item>\n读写译\n \n体育 \n</item>
+        <item>低频电子电路\n\n数字信号处理\n（连上三节）</item>
+        <item>\n视听说\n数字电路与逻辑设计\n单片机\n</item>
+    </string-array>
+
+</resources>

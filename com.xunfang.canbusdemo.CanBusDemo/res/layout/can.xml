@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainscreen_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/canbus_scrollview"
+        android:layout_width="440.0dip"
+        android:layout_height="300.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="35.0dip"
+        android:background="#ffffffff" >
+
+        <TextView
+            android:id="@+id/canbus_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/canbus_text"
+            android:text=""
+            android:textColor="#ff000000"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/canbus_edit"
+            android:layout_width="280.0dip"
+            android:layout_height="55.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="10.0dip"
+            android:maxLength="8" />
+
+        <Button
+            android:id="@+id/canbus_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:text="  SEND  " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10.0dip"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/canbus_button2"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:text="CLEAN" />
+
+        <Button
+            android:id="@+id/canbus_button3"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:text="  EXIT  " />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/doorclose_1" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/doorclose_2" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/doorclose_3" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/doorclose_4" />
+
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

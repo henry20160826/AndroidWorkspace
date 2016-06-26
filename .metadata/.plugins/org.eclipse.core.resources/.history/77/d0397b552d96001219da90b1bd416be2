@@ -1,0 +1,58 @@
+package com.hu.toupiao;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class SInfoActivity extends Activity{
+
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	private EditText et_sid;
+	private EditText et_name;
+	private EditText et_phone;
+	private EditText et_classPost;
+	private EditText et_schoolPost;
+	private EditText et_politicalStatus;
+	private EditText et_PartyClass;
+	private Button bt_ok,bt_cancel;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_studentinfo);
+		getWidget();
+		bt_ok.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				//1、将数据加入数据库2、更新ListView				
+			}
+		});
+		bt_cancel.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		})
+	}
+	private void getWidget()
+	{
+		et_sid=(EditText)findViewById(R.id.et_sid);
+		et_name=(EditText)findViewById(R.id.et_name);
+		et_phone=(EditText)findViewById(R.id.et_phone);
+		et_classPost=(EditText)findViewById(R.id.et_classPost);
+		et_schoolPost=(EditText)findViewById(R.id.et_schoolPost);
+		et_politicalStatus=(EditText)findViewById(R.id.et_politicalStatus);
+		et_PartyClass=(EditText)findViewById(R.id.et_PartyClass);
+		bt_ok=(Button)findViewById(R.id.bt_ok);
+		bt_cancel=(Button)findViewById(R.id.bt_cancel);
+	}
+	
+}

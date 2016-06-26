@@ -1,0 +1,83 @@
+9
+
+dir
+4
+svn://202.202.43.2/android/2010210730/Ktable/.metadata/.plugins
+svn://202.202.43.2/android/2010210730
+
+
+
+2012-12-11T15:30:44.369559Z
+4
+2010210730
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+aa9cdf37-ca0f-ec4e-bab9-ce0330e6500b
+
+
+
+
+
+
+0
+
+org.eclipse.cdt.core
+dir
+
+org.eclipse.cdt.make.core
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.core.runtime
+dir
+
+org.eclipse.debug.core
+dir
+
+org.eclipse.debug.ui
+dir
+
+org.eclipse.epp.usagedata.recording
+dir
+
+org.eclipse.jdt.core
+dir
+
+org.eclipse.jdt.ui
+dir
+
+org.eclipse.mylyn.bugzilla.core
+dir
+
+org.eclipse.mylyn.tasks.ui
+dir
+
+org.eclipse.team.cvs.core
+dir
+
+org.eclipse.team.svn.core
+dir
+
+org.eclipse.team.svn.revision.graph
+dir
+
+org.eclipse.ui.intro
+dir
+
+org.eclipse.ui.workbench
+dir
+

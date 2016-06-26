@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+        <TextView 
+        android:text="亲爱的朋友们：\n
+        非常感谢使用第一版的智能课表（版本号1.0）！\n
+        坦白的讲是一个比较粗糙的版本，在使用过程中可能会出现各种各样的问题，还请见谅。
+        我们将在不久后推出智能课表的1.1版本欢迎继续使用。\n
+        作者："
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="0pt"
+            android:gravity="right"
+            android:text="---胡清华、陈冠豪、严朝利"
+            android:textSize="20dp" />
+    <!--
+     android:background="#ffffff"
+        android:textColor="#000000"
+    -->
+
+</LinearLayout>

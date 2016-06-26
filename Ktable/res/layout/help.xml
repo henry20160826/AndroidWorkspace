@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="使用说明：\n
+        由于是第一版的智能，可能在操作上还是比较复杂的。\n
+        （1）本地模式：进入内网查询课表，将课表复制粘贴到名为kebiao.xls的左上角。\n
+       （2）联网模式即用户可以写出学号，从服务器获得自己的最新课表以及及时更新本地课表，为防止课程变化，用户也可以采用本地编辑的方式，更新服务器的数据以达到一致"
+        android:textSize="25dp" />
+    <!--
+ android:background="#ffffff"
+ android:textColor="#000000"
+    -->
+
+</LinearLayout>

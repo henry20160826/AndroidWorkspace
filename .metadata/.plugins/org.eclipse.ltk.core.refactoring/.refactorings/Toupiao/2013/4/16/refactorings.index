@@ -1,0 +1,11 @@
+1366010507436	Rename resource 'lookup.xml'
+1366268786652	Rename method 'queryTheCursor'
+1366270099818	Delete element
+1366334780924	Rename resource 'list_student.xml'
+1366334964374	Rename field 'studentE'
+1366335614000	Rename local variable 'sidString'
+1366335622013	Rename local variable 'nameString'
+1366335647437	Rename local variable 'classPostString'
+1366378653768	Rename type 'StudentActivity'
+1366380189438	Rename resource 'activity_student.xml'
+1366469476147	Rename local variable 'sql'

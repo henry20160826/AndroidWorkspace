@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;string&apos; in &apos;hu.network.ClientThread.run()&apos; to &apos;manyString&apos;&#x0D;&#x0A;- Original project: &apos;MyPhone&apos;&#x0D;&#x0A;- Original element: &apos;hu.network.ClientThread.run().string&apos;&#x0D;&#x0A;- Renamed element: &apos;string&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;string&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;hu.network{ClientThread.java[ClientThread~run@string!1046!1086!1055!1060!\[QString;!0!false" name="manyString" references="true" stamp="1401103046074" version="1.0"/>
+</session>

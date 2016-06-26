@@ -1,0 +1,121 @@
+package com.hu.activity;
+
+import static com.hu.DataClass.Content.SMS_URI_ALL;
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.hu.DataClass.SmsInfo;
+import com.hu.NetHelper.UDPHelper;
+import com.hu.toupiao.R;
+
+public class NewElectionActivity extends Activity {
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	private TextView textView;
+	private Button button;
+	private UDPHelper udpHelper;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO 创建Activity
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_newelection);
+		getWidget();
+		// SMSReceiver receiver = new SMSReceiver();
+		// getSmsInfo();
+		udpHelper = new UDPHelper(4000);
+		textView.setText("没有数据");
+		new Thread() {
+
+			/*
+			 * (non-Javadoc)
+			 * 
+			 * @see java.lang.Thread#run()
+			 */
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				super.run();
+
+				String receiveString = udpHelper.receive();
+				textView.setText(receiveString);
+			}
+
+		}.start();
+
+	}
+
+	public void getSmsInfo() {
+		// TODO 获得未读的Sms
+		String[] projection = new String[] { "_id", "address", "person",
+
+		"body", "date", "type" };
+		Uri uri = Uri.parse(SMS_URI_ALL);
+		String selection = "type = 1 and read = 0";// 短信而且未读
+		Cursor cursor = managedQuery(uri, projection, selection, null,
+				"date desc");
+		int nameColumn = cursor.getColumnIndex("person");
+		int phoneNumberColumn = cursor.getColumnIndex("address");
+		int smsbodyColumn = cursor.getColumnIndex("body");
+		int dateColumn = cursor.getColumnIndex("date");
+		int typeColumn = cursor.getColumnIndex("type");
+		if (0 != cursor.getCount()) {
+			SmsInfo smsinfo = new SmsInfo();
+			while (cursor.moveToNext()) {
+				smsinfo.setName(cursor.getString(nameColumn));
+				smsinfo.setDate(cursor.getString(dateColumn));
+				smsinfo.setPhoneNumber(cursor.getString(phoneNumberColumn));
+				smsinfo.setSmsbody(cursor.getString(smsbodyColumn));
+				smsinfo.setType(cursor.getString(typeColumn));
+				break;
+			}
+			textView.setText(smsinfo.getPhoneNumber());
+			cursor.close();
+		} else {
+			textView.setText("没有未读信息");
+		}
+
+	}
+
+	public boolean checkSms(Cursor cursor) {
+		// TODO 鉴权，判断是否有投票权限
+		// 不能在Cursor中删除对象，所以一条一条处理短信
+		return false;
+	}
+
+	public void analysisSms(Cursor cursor) {
+		// TODO 解析短信
+	}
+
+	public void addVote() {
+		// TODO 将新的票添加到显示
+	}
+
+	private void getWidget() {
+		// TODO 得到Activity所需的控件
+		textView = (TextView) findViewById(R.id.textView1);
+		button = (Button) findViewById(R.id.button1);
+		button.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				System.out.println("button down");
+				Intent intent = new Intent();
+				intent.setAction(Intent.ACTION_EDIT);
+				NewElectionActivity.this.sendBroadcast(intent);
+			}
+		});
+	}
+
+}

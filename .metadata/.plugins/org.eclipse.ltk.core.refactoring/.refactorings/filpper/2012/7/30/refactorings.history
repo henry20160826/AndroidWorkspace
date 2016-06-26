@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;anim&apos;&#x0D;&#x0A;- Original project: &apos;filpper&apos;&#x0D;&#x0A;- Destination element: &apos;anim&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     push_left_out.xml&#x0D;&#x0A;     push_right_out.xml&#x0D;&#x0A;     push_right_in.xml&#x0D;&#x0A;     push_left_in.xml" description="Copy files" element1="res/anim/push_left_out.xml" element2="res/anim/push_right_out.xml" element3="res/anim/push_right_in.xml" element4="res/anim/push_left_in.xml" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1343192254776" target="/Ktable/res/anim" units="0" version="1.0"/>
+</session>

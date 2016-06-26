@@ -1,0 +1,119 @@
+package hu.network;
+
+//服务器端
+import static hu.dataclass.Content.*;
+
+import java.net.*;
+import java.io.*;
+
+import android.os.Environment;
+
+/**
+ * Socketserver从客户端读取文件并保存为本地文件！
+ * 
+ * 
+ */
+public class ReceiveFile implements Runnable {
+	private static ServerSocket ss = null;
+	private static Socket s = null;
+
+	private static File f = null;
+	private static RandomAccessFile fw = null;
+	private String SDPath;
+
+	private String fileNameString;
+
+	public ReceiveFile(String fileNameString) {
+		// TODO Auto-generated constructor stub
+		SDPath = getSDPath();
+		this.fileNameString = SDPath + PATH + fileNameString;
+
+	}
+
+	public void run() {
+		initServer(FILE_PORT);
+		getFile();
+	}
+
+	/**
+	 * 初始化服务器端
+	 * 
+	 * @param port
+	 *            服务器端要使用的端口
+	 */
+	public void initServer(int port) {
+		try {
+			ss = new ServerSocket(port);
+			s = ss.accept();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	// 从SocketClient读取文件
+	public void getFile() {
+		byte[] b = new byte[1024];
+
+		try {
+			// 定义输入流，s.getInputStream();
+			InputStream in = s.getInputStream();
+			DataInputStream din = new DataInputStream(new BufferedInputStream(
+					in));
+
+			// 如果删除重名文件
+						deleteFile(PATH + fileNameString);
+			
+			// 创建要保存的文件
+			f = new File(fileNameString);
+			fw = new RandomAccessFile(f, "rw");
+
+			int num = din.read(b);
+			while (num != -1) {
+//				String s=new String(b);
+//				b=s.getBytes();
+				// 向文件中写入0~num个字节
+				fw.write(b);
+				// 跳过num个字节再次写入文件
+				fw.skipBytes(num);
+				// 读取num个字节
+				num = din.read(b);
+			}
+			// 关闭输入，输出流
+			din.close();
+			fw.close();
+			ss.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	public String getSDPath() {
+		File sdDir = null;
+		boolean sdCardExist = Environment.getExternalStorageState().equals(
+				android.os.Environment.MEDIA_MOUNTED); // 判断sd卡是否存在
+		if (sdCardExist) {
+			sdDir = Environment.getExternalStorageDirectory();// 获取跟目录
+		}
+		return sdDir.toString();
+
+	}
+	/**
+	 * 删除单个文件
+	 * 
+	 * @param sPath
+	 *            被删除文件的文件名
+	 * @return 单个文件删除成功返回true，否则返回false
+	 */
+	public boolean deleteFile(String sPath) {
+		boolean flag = false;
+		File file = new File(sPath);
+		// 路径为文件且不为空则进行删除
+		if (file.isFile() && file.exists()) {
+			file.delete();
+			flag = true;
+		}
+		return flag;
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Content.java&apos; to &apos;order_dishes/src/com.hu.dataclass&apos;&#x0D;&#x0A;- Original project: &apos;Toupiao&apos;&#x0D;&#x0A;- Destination element: &apos;order_dishes/src/com.hu.dataclass&apos;&#x0D;&#x0A;- Original element: &apos;com.hu.DataClass.Content.java&apos;" description="Copy compilation unit" destination="=order_dishes/src&lt;com.hu.dataclass" element1="/src&lt;com.hu.DataClass{Content.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1391241445531" units="1" version="1.0"/>
+</session>

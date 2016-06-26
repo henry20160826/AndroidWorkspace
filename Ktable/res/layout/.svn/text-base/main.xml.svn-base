@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"           
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="120dip"
+        android:textSize="20pt"
+        android:text="@string/KtableE" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20pt"
+        android:text="@string/KtableC" />
+    <TextView 
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:text="@string/hello" 
+		android:paddingTop="15pt"
+		android:paddingBottom="10pt"/>
+    <Button 
+        android:id="@+id/button1"
+        android:layout_width="50pt"
+        android:layout_height="25pt"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/enterK"
+        android:textSize="9pt"></Button>
+
+</LinearLayout>

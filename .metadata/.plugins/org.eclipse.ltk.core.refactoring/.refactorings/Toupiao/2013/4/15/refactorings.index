@@ -1,0 +1,5 @@
+1365476242659	Rename package 'com.hu.toupiao'
+1365608460465	Extract method 'getInfo'
+1365669870751	Extract method 'getWidget'
+1365670526309	Extract method 'dealListview'
+1365696198666	Rename method 'readDB'

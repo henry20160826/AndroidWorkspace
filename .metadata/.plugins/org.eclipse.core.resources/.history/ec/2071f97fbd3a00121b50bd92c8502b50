@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/setWindow" >
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="15pt"/>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="2pt"
+        android:background="#808080"/>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="选择皮肤"
+        android:textColor="#000000"
+        android:textSize="13pt"
+        android:background="#ee9900"/>
+    <RadioGroup 
+        android:id="@+id/styleGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RadioButton 
+            android:id="@+id/my"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="水墨清华"/>
+
+        <RadioButton 
+            android:id="@+id/pink"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="粉色女生"/>
+        <RadioButton 
+            android:id="@+id/green"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="绿色露水"/>
+        <RadioButton 
+            android:id="@+id/blue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="蓝色雨后"/>
+        </RadioGroup>
+        
+     <Button
+            android:id="@+id/setOK"
+            android:layout_width="60dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="20pt"
+            android:layout_gravity="right"
+            android:text="确定" 
+            android:background="#ee9900"/>
+
+</LinearLayout>

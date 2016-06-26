@@ -1,0 +1,128 @@
+package com.hu.activity;
+
+import static com.hu.DataClass.Content.*;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.hu.DataClass.All;
+import com.hu.DataClass.Election;
+import com.hu.DataClass.Student;
+import com.hu.toupiao.R;
+
+public class ElectionInfoActivity extends Activity {
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
+	private EditText et_eid;
+	private EditText et_name;
+	private EditText et_date;
+	private Button bt_ok, bt_cancel;
+	private Election election;
+	private int mode;
+	private String oldEid;
+	public All all;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);// 隐藏标题
+		setContentView(R.layout.activity_election);
+		all = (All) getApplication();
+		getWidget();
+		getInfo();
+		bt_ok.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// 判断sid合法性
+				// 1、将数据加入数据库2、更新ListView
+				// Toast.makeText(SInfoActivity.this, mode, Toast.LENGTH_LONG)
+				// .show();
+				Election election = getElection();
+				
+					if (ADD==mode) {
+							all.dbManager.addElection(election);
+							Intent intent = new Intent();
+							
+							intent.putExtra("name", election.name);
+							intent.putExtra("date", election.date);
+							setResult(ADD, intent);
+							finish();
+					} else if (EDIT==mode) {
+								String sid = student.sid;
+								student.sid = oldEid;
+								all.dbManager.update(student);
+								all.dbManager.updateSid(oldEid, sid);
+						}
+						if (true == ok) {
+							Intent intent = new Intent();
+							intent.putExtra("sid", student.sid);
+							intent.putExtra("name", student.name);
+							intent.putExtra("classPost", student.classPost);
+							setResult(EDIT, intent);
+							finish();
+						}
+					}
+				} 
+
+			}
+		});
+		
+		bt_cancel.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				// intent.putExtra("return", edit.getText().toString());
+				setResult(RESULT_CANCELED, intent);
+				finish();
+			}
+		});
+	}
+
+	private void getInfo() {
+		Intent intent = getIntent();
+		mode = intent.getExtras().getInt("mode");
+		// Bundle bundle=intent.getExtras();
+		if (EDIT==mode) {
+//			student = (Student) intent.getSerializableExtra("student");
+			oldEid = intent.getExtras().getString("eid");
+			election=all.dbManager.queryElection(oldEid);
+			showTextInEt();
+		}
+	}
+
+	private Election getElection() {
+		Election election = new Election();
+		election.name = et_name.getText().toString();
+		election.date = et_date.getText().toString();
+
+		return election;
+	}
+
+	private void getWidget() {
+		et_eid = (EditText) findViewById(R.id.et_sid);
+		et_name = (EditText) findViewById(R.id.et_name);
+		bt_ok = (Button) findViewById(R.id.bt_ok);
+		bt_cancel = (Button) findViewById(R.id.bt_cancel);
+	}
+
+	private void showTextInEt() {
+		et_eid.setText(election.eid);
+		et_name.setText(election.name);
+		et_date.setText(election.date);
+	}
+
+}
